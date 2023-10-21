@@ -1,0 +1,98 @@
+/* Configuración global */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-image: url('/imagenes/pxfuel.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cabecera {
+  margin-bottom: 20px;
+}
+
+.titulo {
+  color: black;
+}
+
+/* Barra de búsqueda */
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+
+.autocomplete input[type="text"] {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+#ciudad + ul.autocomplete-list {
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 0.5em;
+}
+#ciudad {
+  width: 150px; /* Ajusta el ancho según tus necesidades */
+  height: 10px; /* Ajusta la altura según tus necesidades */
+}
+#ul.autocomplete-list {
+  display: none;
+}
+.autocomplete li {
+  cursor: pointer;
+}
+
+
+.boton {
+  padding: 0.4em 1em;
+  font-size: 1em;
+  background-color: orange;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+
+#resultado {
+  margin-top: 20px;
+}
+
+
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
+.mapouter {
+  position: relative;
+  text-align: center;
+  height: 500px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.datos-clima {
+  margin-left: 20px;
+}
+
+.datos-clima p {
+  margin-top: 0.5em;
+}
+
+@media screen and (max-width: 600px) {
+  .mapouter {
+      width: 100%;
+      height: 300px;
+  }
+}

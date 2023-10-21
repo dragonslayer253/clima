@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aplicación de Clima</title>
+    <link rel="stylesheet" type="text/css" href="/estilos/styles.css">
+</head>
+<body>
+    <h1>Aplicación de Clima</h1>
+    <div class="autocomplete">
+        <input type="text" id="ciudad" placeholder="Ingresa una ciudad">
+        <ul id="opciones" class="autocomplete-list"></ul>
+    </div>
+    <button id="buscar">Buscar</button>
+    <div id="resultado"></div>
+    <div class="container">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="600" height="500" id="gmap_canvas" src="" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+            </div>
+        </div>
+        <div id="datos-clima" class="datos-clima">
+            <h2 id="ubicacion"></h2>
+            <p id="temperatura"></p>
+            <p id="condiciones"></p>
+            <p id="humedad"></p>
+            <p id="viento"></p>
+            <p id="presion"></p>
+            <p id="hora"></p>
+        </div>
+    </div>
+    <script src="/interactividad/script.js"></script>
+</body>
+</html>
