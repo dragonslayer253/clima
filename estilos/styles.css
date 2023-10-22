@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 .cabecera {
   margin-bottom: 20px;
 }
@@ -27,24 +28,28 @@ body {
 #ciudad + ul.autocomplete-list {
   position: absolute;
   z-index: 1;
-  top: 100%;
+  top: 40%;
   left: 0;
   right: 0;
   max-height: 200px;
   overflow-y: auto;
   padding: 0.5em;
-}
+  z-index: 1;
+  }
+
+
 #ciudad {
-  width: 150px; 
-  height: 10px; 
+  width: 150px;
+  height: 10px;
 }
+
 #ul.autocomplete-list {
   display: none;
 }
+
 .autocomplete li {
   cursor: pointer;
 }
-
 
 .boton {
   padding: 0.4em 1em;
@@ -55,47 +60,50 @@ body {
   cursor: pointer;
 }
 
-
 #resultado {
-  margin-top: 20px;
+  margin-top: 120px; 
 }
-
 
 .contenido {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: flex-start;
 }
-
 
 .mapouter {
   position: relative;
   text-align: center;
-  height: 500px;
-  width: 600px;
+  height: 100px;
+  width: 100px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
 }
 
-.datos-clima {
-  margin-left: 20px;
+datos-clima {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .datos-clima p {
-  margin-top: 0.5em;
+  margin-left: 20px;
+  margin-right: 20px;
+
 }
 
 @media screen and (max-width: 600px) {
   body {
     background-size: auto;
   }
-}
+
   .mapouter {
-      width: 100%;
-      height: 300px;
+    width: 100%;
+    height: 300px;
   }
-
-
+}
 

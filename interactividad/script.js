@@ -9,7 +9,11 @@ buscarBtn.addEventListener("click", () => {
   const ciudad = ciudadInput.value;
   obtenerClima(ciudad);
 });
+const borrarBtn = document.getElementById("borrar");
 
+borrarBtn.addEventListener("click", () => {
+  ciudadInput.value = "";
+});
 ciudadInput.addEventListener("input", function() {
   const filtro = ciudadInput.value.toLowerCase();
   obtenerCiudades(filtro);
@@ -43,6 +47,7 @@ const obtenerCiudades = async (filtro) => {
 
 const obtenerClima = async (ciudad) => {
   try {
+    ciudadInput.value = ""; 
     const respuesta = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${ciudad}`
     );
@@ -78,7 +83,9 @@ const mostrarClima = (datos) => {
   `;
 
   const mapaIframe = document.getElementById("gmap_canvas");
-  const mapaURL = `https://maps.google.com/maps?q=${encodeURIComponent(ubicacion + ',' + pais)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+  const mapaURL = `https://maps.google.com/maps?q=${encodeURIComponent(
+    ubicacion + "," + pais
+  )}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
   mapaIframe.src = mapaURL;
 };
 
