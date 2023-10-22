@@ -2,11 +2,10 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-image: url('/imagenes/pxfuel.jpg');
-  background-size: cover;
+  background-size: 500% 500%;
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .cabecera {
   margin-bottom: 20px;
 }
